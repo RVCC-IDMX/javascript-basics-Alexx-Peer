@@ -27,6 +27,8 @@
 */
 // * Add your code BELOW here
 
+let myName;
+
 // * Don't mess with the test code below here!
 test('myName', () => {
   expect(myName).toBeUndefined();
@@ -45,6 +47,8 @@ test('myName', () => {
 */
 // * Add your code BELOW here
 
+let age = 22;
+
 // * Don't mess with the test code below here!
 test('age', () => {
   expect(age).toBe(22);
@@ -62,6 +66,8 @@ test('age', () => {
    TODO: Use the const keyword to create a constant called daysInWeek and assign it the number literal 7.
 */
 // * Add your code BELOW here
+
+const daysInWeek = 7;
 
 // * Don't mess with the test code below here!
 test('daysInWeek', () => {
@@ -87,6 +93,9 @@ test('daysInWeek', () => {
    TODO: DO NOT use the number literal 7 directly.
 */
 // * Add your code BELOW here
+
+let myWorkDays;
+myWorkDays = daysInWeek;
 
 // * Don't mess with the test code below here!
 test('myWorkDays', () => {
@@ -114,6 +123,11 @@ test('myWorkDays', () => {
 */
 // * Add your code BELOW here
 
+var oops;
+var sillyMath;
+sillyMath = oops * 2;
+
+// opps is undefined so it can't multiply oops by 2! so it gives NaN
 // * Don't mess with the test code below here!
 test('sillyMath', () => {
   expect(oops).toBeUndefined();
@@ -134,6 +148,9 @@ test('sillyMath', () => {
 */
 // * Add your code BELOW here
 
+var sillyString;
+sillyString = `Hello, ${oops}`
+
 // * Don't mess with the test code below here!
 test('sillyString', () => {
   expect(oops).toBeUndefined();
@@ -152,6 +169,9 @@ test('sillyString', () => {
 */
 // * Add your code BELOW here
 
+let year = 2022;
+let firstName = 'John';
+const taxRate = 0.2;
 // * Don't mess with the test code below here!
 test('year', () => {
   expect(year).toBe(2022);
@@ -181,3 +201,5 @@ test('taxRate', () => {
    - Why does multiplying an undefined variable result in NaN, and why does NaN not equal any value, including itself?
    (Discuss with your peers or research the IEEE 754 standard for floating-point arithmetic.)
 */
+// js can't read 'undefined' as a valid number so it reads back NaN when it's multiplied by a real number.
+// NaN doesn't equal any value because it's undefined! it's purpose is to signify an invalid answer/result.
