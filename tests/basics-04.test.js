@@ -36,6 +36,11 @@
 */
 // * Add your code BELOW here
 
+const a = 2;
+const b = 3;
+const c = a + b;
+
+
 // * Don't mess with the test code below here!
 test('arithmetic sum', () => {
   expect(typeof a).toBe('number');
@@ -65,6 +70,8 @@ test('arithmetic sum', () => {
 */
 // * Add your code BELOW here
 
+var rnd = Math.random();
+
 // * Don't mess with the test code below here!
 test('rnd', () => {
   expect(typeof rnd).toBe('number');
@@ -86,6 +93,8 @@ test('rnd', () => {
    TODO: ensuring it is between 0 and 5 (use Math.floor appropriately).
 */
 // * Add your code BELOW here
+
+var randomInt = Math.floor(Math.random() * 5);
 
 // * Don't mess with the test code below here!
 vi.spyOn(global.Math, 'random').mockReturnValue(0.9);
@@ -110,6 +119,9 @@ test('randomInt', () => {
    TODO: In line 2, declare a variable called numRounded and assign it the value of num rounded down (use Math.floor).
 */
 // * Add your code BELOW here
+
+const num = 17.89;
+var numRounded = Math.floor(num);
 
 // * Don't mess with the test code below here!
 test('numRounded', () => {
@@ -142,6 +154,13 @@ test('numRounded', () => {
 */
 // * Add your code BELOW here
 
+let rounding1 = 5.95;
+rounding1 = Math.round(rounding1);
+let rounding2 = 5.5;
+rounding2 = Math.round(rounding2);
+let rounding3 = 5.05;
+rounding3 = Math.round(rounding3);
+
 // * Don't mess with the test code below here!
 test('rounding', () => {
   expect(typeof rounding1).toBe('number');
@@ -164,6 +183,9 @@ test('rounding', () => {
    TODO: In line 2, declare a constant called bakersDozen and assign it the result of parseInt(orderBagels).
 */
 // * Add your code BELOW here
+
+let orderBagels = '13 is a Baker\'s Dozen';
+const bakersDozen = parseInt(orderBagels);
 
 // * Don't mess with the test code below here!
 test('bakersDozen', () => {
@@ -190,6 +212,10 @@ test('bakersDozen', () => {
    TODO: of calling myPi.toFixed(4) to get a string with four decimal places.
 */
 // * Add your code BELOW here
+
+const myPi = 3.141592653589793;
+const myPiFixed = myPi.toFixed(4);
+
 
 // * Don't mess with the test code below here!
 test('myPiFixed', () => {
@@ -220,6 +246,8 @@ test('myPiFixed', () => {
 */
 // * Add your code BELOW here
 
+let sliceOfPi = +myPiFixed;
+
 // * Don't mess with the test code below here!
 test('sliceOfPi', () => {
   expect(() => {
@@ -241,4 +269,9 @@ test('sliceOfPi', () => {
    Challenge Question:
      - What are the potential pitfalls of type conversion in JavaScript (for example, using parseInt on a string that starts with a number but contains non-numeric characters)?
      (Discuss the behavior of parseInt, parseFloat, and the unary + operator in different scenarios.)
+*/
+/* parseInt will only convert strings to numbers if the string starts with a numeric character. Otherwise it just returns NaN. Best for whole numbers.
+parseFloat works very similarly in that it works the same way as parseInt, except it doesn't stop parcing at decimal points. Returns NaN if string doesn't start with numeric characters. Best for decimal numbers.
+unary is quick and concise. It converts the *entire* string into a number. If that's not possible, it returns NaN. This can be problematic if there are any non-numeric characters in the string.
+Furthermore, '+' returns a value of 0 for empty strings.
 */

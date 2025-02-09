@@ -226,7 +226,7 @@ test('creating a message', () => {
 
 let tax = 8.25;
 let price = 100.00;
-let total = `Your total including tax is ${price + tax}`;
+let total = `Your total including tax is $${price + tax}`;
 
 
 // * Don't mess with the test code below here!
@@ -270,6 +270,7 @@ test('html', () => {
      - Why are JavaScript strings immutable, and what are some practical implications of string immutability when manipulating text?
      (Discuss with your peers or research the benefits of immutability in functional programming.)
 */
+
 /* immutability is a core part of JS and a highly valuable aspect of the language. JS makes sure that every string refers to the same
 variable to ensure invariables. This helps with memory optimization. Immutabilty of strings in JS is benefical because once assigned,
 they can't be accidentally changed or modified, and this prevents many coding errors.

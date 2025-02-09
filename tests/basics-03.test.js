@@ -34,7 +34,7 @@
 */
 // * Add your code BELOW here
 
-
+let isSeptember = true;
 
 // * Don't mess with the test code below here!
 test('isSeptember', () => {
@@ -58,6 +58,8 @@ test('isSeptember', () => {
 */
 // * Add your code BELOW here
 
+let isFalsy = NaN;
+
 // * Don't mess with the test code below here!
 test('isFalsy', () => {
   expect(isFalsy).toBeFalsy();
@@ -76,6 +78,8 @@ test('isFalsy', () => {
    TODO: any truthy value (but do not use the literal true).
 */
 // * Add your code BELOW here
+
+let isTruthy = 42;
 
 // * Don't mess with the test code below here!
 test('isTruthy', () => {
@@ -96,6 +100,8 @@ test('isTruthy', () => {
 */
 // * Add your code BELOW here
 
+let notAssigned;
+
 // * Don't mess with the test code below here!
 test('notAssigned', () => {
   expect(notAssigned).toBeUndefined();
@@ -114,6 +120,8 @@ test('notAssigned', () => {
    TODO: Use the let keyword to declare a variable called bloop and assign it to null.
 */
 // * Add your code BELOW here
+
+let bloop = null;
 
 // * Don't mess with the test code below here!
 test('bloop', () => {
@@ -135,6 +143,8 @@ test('bloop', () => {
 */
 // * Add your code BELOW here
 
+let notSeptember = !isSeptember;
+
 // * Don't mess with the test code below here!
 test('notSeptember', () => {
   expect(notSeptember).toBeFalsy();
@@ -155,6 +165,9 @@ test('notSeptember', () => {
 */
 // * Add your code BELOW here
 
+let user = '';
+let isLoggedIn = !!user;
+
 // * Don't mess with the test code below here!
 test('isLoggedIn', () => {
   expect(isLoggedIn).toBe(false);
@@ -173,4 +186,10 @@ test('isLoggedIn', () => {
    Challenge Question:
      - Discuss why the typeof null is "object" in JavaScript, and what historical reasons might explain this behavior.
      (Research the ECMAScript specification or ask your instructor.)
+*/
+
+/* Null returning as an object began as a bug in early versions of JS. Values were represented by tagging.
+The type tag for objects was 0 and null was represented as 0x00 which was interpreted as an object.
+By the time the bug was discovered, a lot of code had already been utilizing this "feature", so to avoid breaking peoples' code
+null stayed as "object".
 */

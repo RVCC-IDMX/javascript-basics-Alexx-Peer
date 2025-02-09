@@ -172,6 +172,7 @@ test('sillyString', () => {
 let year = 2022;
 let firstName = 'John';
 const taxRate = 0.2;
+
 // * Don't mess with the test code below here!
 test('year', () => {
   expect(year).toBe(2022);
